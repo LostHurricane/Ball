@@ -53,8 +53,13 @@
     <UnityVersion>2020.3.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Trap_Jump.cs" />
+    <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\LevelTurning.cs" />
+    <Compile Include="Assets\Scripts\Interfaces.cs" />
+    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\BonusSpeed.cs" />
+    <Compile Include="Assets\Scripts\BonusCollectable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

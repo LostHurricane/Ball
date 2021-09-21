@@ -27,6 +27,7 @@ public class LevelTurning : MonoBehaviour
 
         rotX = Mathf.Clamp(rotX, -50, 50);
         rotY = Mathf.Clamp(rotY, -50, 50);
+        
 
         transform.rotation = Quaternion.Euler(rotX, 0f, rotY);
     }
