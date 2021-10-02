@@ -4,19 +4,30 @@ using UnityEngine;
 
 public class LevelTurning : MonoBehaviour
 {
+    [SerializeField]
+    private float rotXmax = 40f;
+    [SerializeField]
+    private float rotYmax = 40f;
 
     private float rotX = 0.0f; // rotation around the right/x axis
     private float rotY = 0.0f; // rotation around the up/y axis
-    // Start is called before the first frame update
-    void Start()
+
+    public Transform levelToRotate;
+    LevelRotator LR;
+
+    private void Awake()
     {
-        
+        //levelToRotate = GameObject.GetComponent<Transform>();
+        LR = new LevelRotator(levelToRotate);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Rotations();
+        LR.Rotate(Input.GetAxis("Mouse X"), -Input.GetAxis("Mouse Y"));
+        //Rotations();
+        //Debug.LogError(Input.GetAxis("Mouse X"));
+        
     }
 
     private void Rotations ()
@@ -25,8 +36,8 @@ public class LevelTurning : MonoBehaviour
         rotY += 90f * (Input.GetAxis("Mouse X")) * Time.deltaTime;
         rotX += 90f * (-Input.GetAxis("Mouse Y")) * Time.deltaTime;
 
-        rotX = Mathf.Clamp(rotX, -50, 50);
-        rotY = Mathf.Clamp(rotY, -50, 50);
+        rotX = Mathf.Clamp(rotX, -rotXmax, rotXmax);
+        rotY = Mathf.Clamp(rotY, -rotYmax, rotYmax);
         
 
         transform.rotation = Quaternion.Euler(rotX, 0f, rotY);
