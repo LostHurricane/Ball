@@ -11,11 +11,15 @@ public class Trap_Jump : MonoBehaviour, IInteractible
     [SerializeField]
     private float HorisontalPower = 3f;
 
+    public event System.Action<int> TakeBonus; //Obobshenniy Delegate
+
+
     public bool IsActive { get; } = true;
 
     public void Activate()
     {
         Debug.Log("Jump!");
+        TakeBonus?.Invoke(UnityEngine.Random.Range(-3, 0));
     }
 
     private void OnTriggerEnter(Collider other)
