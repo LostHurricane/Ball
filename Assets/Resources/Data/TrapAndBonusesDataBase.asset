@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a5f0920d6db2c4680c7804e73f146c, type: 3}
+  m_Name: TrapAndBonusesDataBase
+  m_EditorClassIdentifier: 
+  interactiveObjectsCoordinats:
+  - {x: 10, y: 3, z: 45}
+  - {x: 34, y: 3, z: 44}
+  - {x: 27.6, y: 3, z: -12.15}
+  - {x: 16.7, y: 3, z: -18.45}
+  - {x: 38, y: 3, z: -22}
+  - {x: 40, y: 3, z: 7}
+  - {x: 16.5, y: 3, z: 20.5}
+  - {x: -6.3, y: 3, z: -10.7}
+  - {x: -37, y: 3, z: 32}
+  - {x: -3.4, y: 3, z: 37}
+  trapToBonusRatio: 1
