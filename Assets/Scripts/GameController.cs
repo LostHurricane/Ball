@@ -13,7 +13,8 @@ public class GameController : MonoBehaviour
 
     private PlayerProgressChecker playerProgressChecker;
     private BonusCollectable[] bonusesCollectable;
-    private Trap_Jump[] traps;
+    
+    private TrapJump[] traps;
 
     [SerializeField]
     private Transform target;
@@ -25,39 +26,35 @@ public class GameController : MonoBehaviour
     private bool lookAt = true;
     private CameraController myCamera;
 
+    [SerializeField]
+    private Data data;
 
-    private void Awake()
+    private Controllers controllers;
+
+    private void Start()
     {
+        controllers = new Controllers();
+        new GameInitialisaton(controllers, data);
+
         //target = transform;
         if (target == null) throw new InvalidDataException("Не видно, что давать камере");
         
-        myCamera = new CameraController(Camera.main, target, offsetPosition, offsetPositionSpace, lookAt);
+        myCamera = new CameraController(target, offsetPosition, offsetPositionSpace, lookAt);
         playerProgressChecker = new PlayerProgressChecker( 5 );
 
+        
         bonusesCollectable = FindObjectsOfType<BonusCollectable>();
         foreach (BonusCollectable bc in bonusesCollectable)
         {
-            bc.AddBonus += playerProgressChecker.BonusChanged;
+            bc.Effect += playerProgressChecker.BonusChanged;
         }
-
-        traps = FindObjectsOfType<Trap_Jump>();
-        foreach (Trap_Jump tr in traps)
-        {
-            tr.TakeBonus += playerProgressChecker.BonusChanged;
-        }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(target.transform.position);
-        myCamera.CameraFollow(target);
+        controllers.Execute(Time.deltaTime);
+        myCamera.LateExecute(Time.deltaTime);
     }
 
 
