@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         controllers = new Controllers();
-        new GameInitialisaton(controllers, data);
+        new GameInitialisaton(controllers, data, GameObject.Find("Player").transform, GameObject.Find("Labirinth").transform);
 
         //target = transform;
         if (target == null) throw new InvalidDataException("Не видно, что давать камере");
