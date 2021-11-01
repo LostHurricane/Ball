@@ -38,8 +38,8 @@ namespace GeekProject
                 { "one",1 },
                 {"three",3 },
             };
-            //var d = dict.OrderBy(delegate (KeyValuePair<string, int> pair) { return pair.Value; });
-            var d = dict.OrderBy(i => i.Value);
+            //var d = dict.OrderBy(delegate (KeyValuePair<string, int> pair) { return pair.Value; }); // Доманее задание исходная версия
+            var d = dict.OrderBy(i => i.Value); // обращение к OrderBy с использованием лямбда-выражения =>
             foreach (var pair in d)
             {
                 Debug.Log($"{pair.Key} - {pair.Value}");

@@ -22,5 +22,10 @@ namespace GeekProject
     
         }
 
+        public Vector3 [] GetTrapsCoordinates () => coordinatesDealer.TrapsLocation.ToArray();
+        public Vector3[] GetBonusCoordinates() => coordinatesDealer.BonusesLocation.ToArray();
+
+
+
     }
 }

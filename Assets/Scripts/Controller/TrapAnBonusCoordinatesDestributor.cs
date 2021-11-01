@@ -23,7 +23,6 @@ namespace GeekProject
         {
             trapsAndBonusesLocationData = data;
             allCoordinates = new List<Vector3>(trapsAndBonusesLocationData.GetCoordinates());
-            //allCoordinates.AddRange(trapsAndBonusesLocationData.GetCoordinates());
             trapToBonusRatio = trapsAndBonusesLocationData.GetTrapBonusRate();
             bonusesAmount = (int)(allCoordinates.Count / (trapsAndBonusesLocationData.GetTrapBonusRate() + 1));
             trapsAmount = allCoordinates.Count - bonusesAmount;

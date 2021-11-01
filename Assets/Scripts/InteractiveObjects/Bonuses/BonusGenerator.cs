@@ -13,7 +13,7 @@ namespace GeekProject
 
         public IInteractible Create(Vector3 position, Transform papa)
         {
-            Debug.Log("Creating Tra");
+            //Debug.Log("Creating Trap");
             var Bonus = data.GetBonus();
             var newBonus = Object.Instantiate(Bonus, position, Quaternion.Euler(0, 0, 0), papa);
             return newBonus;

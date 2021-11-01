@@ -19,6 +19,9 @@ namespace GeekProject
         [SerializeField] private string bonusesInfoLocation;
         private DataBonuses dataBonuses;
 
+        [SerializeField] private string inputDataLocation;
+        private InputData inputData;
+
 
 
         public TrapAndBonusesDataBase GetTrapsAndBonuses ()
@@ -45,13 +48,23 @@ namespace GeekProject
         {
             if (dataBonuses == null)
             {
-                Debug.Log("Loading");
+                //Debug.Log("Loading");
 
                 dataBonuses = Resources.Load<DataBonuses>(Path.Combine("Data/" + bonusesInfoLocation));
-                Debug.Log("Loaded");
+                //Debug.Log("Loaded");
             }
 
             return dataBonuses;
+        }
+
+        public InputData GetInputData()
+        {
+            if (inputData == null)
+            {
+                inputData = Resources.Load<InputData>(Path.Combine("Data/" + inputDataLocation));
+            }
+
+            return inputData;
         }
 
 

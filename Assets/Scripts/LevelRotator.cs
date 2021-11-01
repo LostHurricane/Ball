@@ -24,7 +24,7 @@ namespace GeekProject
 
         public LevelRotator((IUserInputAxisProxy _inputHorizontal, IUserInputAxisProxy _inputVertical) input/*, Transform _level*/)
         {
-            //level = _level;
+            
             level = GameObject.Find("Labirinth").transform;
 
             horizontalInputProxy = input._inputHorizontal;
@@ -62,6 +62,15 @@ namespace GeekProject
         {
             horizontalInputProxy.AxisOnChange -= HorizontalOnAxisOnChange;
             verticalInputProxy.AxisOnChange -= VerticalOnAxisOnChange;
+        }
+
+        public void RotationChanged()
+        {
+           
+            rotX = level.rotation.eulerAngles.x;
+            rotY = level.rotation.eulerAngles.z;
+
+            //level.rotation = Quaternion.Euler(rotX, 0f, rotY);
         }
 
     }
