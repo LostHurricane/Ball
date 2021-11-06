@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a5f0920d6db2c4680c7804e73f146c, type: 3}
   m_Name: TrapAndBonusesDataBase
   m_EditorClassIdentifier: 
-  interactiveObjectsCoordinats:
-  - {x: 10, y: 3, z: 45}
-  - {x: 34, y: 3, z: 44}
-  - {x: 27.6, y: 3, z: -12.15}
-  - {x: 16.7, y: 3, z: -18.45}
-  - {x: 38, y: 3, z: -22}
-  - {x: 40, y: 3, z: 7}
-  - {x: 16.5, y: 3, z: 20.5}
-  - {x: -6.3, y: 3, z: -10.7}
-  - {x: -37, y: 3, z: 32}
-  - {x: -3.4, y: 3, z: 37}
-  trapToBonusRatio: 1
+  _interactiveObjectsCoordinats:
+  - {x: 30.2, y: 2.5, z: 24.1}
+  - {x: -3.3, y: 2.5, z: -11.6}
+  - {x: -39.7, y: 2.5, z: 26.7}
+  - {x: 35.3, y: 2.5, z: -43.1}
+  - {x: -5.2, y: 2.5, z: -44.3}
+  - {x: -43, y: 2.5, z: -44}
+  _trapToBonusRatio: 1.033
+  _coordinatePoint: {fileID: 1426239096063688715, guid: cc7dbcaf0514de946a7064352f2f9c46, type: 3}
