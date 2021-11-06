@@ -29,9 +29,6 @@ namespace GeekProject
             _pcInputSave = inputSaves.inputSave;
             _pcInputLoad = inputSaves.inputLoad;
 
-           
-            //_pcInputSave.KeyPressed += SaveGame;
-
         }
 
       

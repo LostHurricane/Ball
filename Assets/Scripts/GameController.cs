@@ -55,6 +55,8 @@ public class GameController : MonoBehaviour
     {
         controllers.Execute(Time.deltaTime);
         myCamera.LateExecute(Time.deltaTime);
+
+
     }
 
 

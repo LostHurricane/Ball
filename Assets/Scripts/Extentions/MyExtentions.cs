@@ -67,5 +67,16 @@ namespace GeekProject
             var j = self.Where(n => n.Equals(example));
             return j.Count();
         }
+
+        public static string [] GetNames<T>(this T[] self)
+        {
+            string [] value = new string [self.Length];
+            
+            for (var j = 0; j < self.Length; j++)
+            {
+                value[j] = self[j].GetType().FullName;
+            }
+            return value;
+        }
     }
 }
