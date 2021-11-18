@@ -10,11 +10,10 @@ namespace GeekProject
         {
             var inputInitialization = new InputInitialization(data.GetInputData());
             var TrapsAndBonuses = new TrapAndBonusInitializer(data);
-            //controllers.Add (new CameraController(GameObject.Find("Player").transform, )
+            controllers.Add(new PlayerProgressChecker(data.GetBonusData().WiningScore));
             controllers.Add(new InputController(inputInitialization.GetInputMovement(), inputInitialization.GetInputDataSave()));
-            var levelTurner = new LevelRotator(inputInitialization.GetInputMovement());
-            controllers.Add(levelTurner);
-            controllers.Add(new SaveLoadManager(inputInitialization.GetInputDataSave(), player, level, (TrapsAndBonuses.GetTrapsCoordinates(), TrapsAndBonuses.GetBonusCoordinates()), levelTurner));
+            controllers.Add(new LevelRotator(inputInitialization.GetInputMovement()));
+            controllers.Add(new SaveLoadManager(inputInitialization.GetInputDataSave(), player, level));
 
 
         }

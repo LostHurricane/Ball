@@ -4,11 +4,10 @@ using System.Xml.Serialization;
 
 namespace GeekProject
 {
-    public class SaverXML <T> : IData<T>
+    public class SaverXML<T> : IData<T>
     {
-        private static XmlSerializer _formatter;
+        private static XmlSerializer _formatter ;
 
-        
 
         public void Save(T data, string path = null)
         {
@@ -25,6 +24,10 @@ namespace GeekProject
         public T Load(string path)
         {
             T result;
+
+            if (_formatter == null)
+                _formatter = new XmlSerializer(typeof (T));
+
             if (!File.Exists(path)) return default(T);
             using (var fs = new FileStream(path, FileMode.Open))
             {

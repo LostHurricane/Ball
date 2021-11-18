@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: DataBonuses
   m_EditorClassIdentifier: 
   bonusPrefab: {fileID: 7643091290211159162, guid: 3387371ad730f7547b122ed8040f0524, type: 3}
+  _winingScore: 5

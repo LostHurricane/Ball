@@ -6,6 +6,7 @@ namespace GeekProject
     public class PCInputKeyDown : IUserInputKey
     {
         private KeyCode _key;
+		private string _input;
         public PCInputKeyDown(KeyCode key)
         {
             _key = key;
