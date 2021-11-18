@@ -10,9 +10,11 @@ namespace GeekProject
     {
         [SerializeField]
         private BonusCollectable bonusPrefab;
-        public BonusCollectable GetBonus()
-        {
-            return bonusPrefab;
-        }
+        public BonusCollectable GetBonus() => bonusPrefab;
+
+        [SerializeField]
+        private int _winingScore;
+        public int WiningScore => _winingScore;
+
     }
 }

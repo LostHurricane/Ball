@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GeekProject
 {
-    public class MiniMap : MonoBehaviour, ILateExecute
+    public class MiniMap : MonoBehaviour//, ILateExecute
     {
         [SerializeField] private Transform _level;
         private void Start()

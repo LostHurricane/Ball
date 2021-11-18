@@ -19,12 +19,8 @@ namespace GeekProject
         CoordinatePoint cp;
 
         //MouseCreatePoint _mousePointer;
-       
-        public InteractiveObjectChecker()
-        {
-            LoadCoordinates(_path);
-        }
 
+        
 
         private void OnGUI()
         {
@@ -38,7 +34,7 @@ namespace GeekProject
                 
             }
             
-            _foldout = EditorGUILayout.Foldout(_foldout, "Coordinates");
+            if (_trapAndBonusesDataBase) _foldout = EditorGUILayout.Foldout(_foldout, "Coordinates");
             if (_foldout && _coordinates.Length!=0)
             {
                 for (var i = 0; i < _coordinates.Length; i++)

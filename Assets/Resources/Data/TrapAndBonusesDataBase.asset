@@ -19,5 +19,6 @@ MonoBehaviour:
   - {x: 35.3, y: 2.5, z: -43.1}
   - {x: -5.2, y: 2.5, z: -44.3}
   - {x: -43, y: 2.5, z: -44}
+  - {x: -43, y: 2.5, z: -44}
   _trapToBonusRatio: 1.033
   _coordinatePoint: {fileID: 1426239096063688715, guid: cc7dbcaf0514de946a7064352f2f9c46, type: 3}

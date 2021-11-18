@@ -19,7 +19,7 @@ namespace GeekProject
         public bool IsEnabled;
                 
         public override string ToString() =>
-            $"<color=red>Player</color> <color=red>Position</color> {PlayerPosition} /*<color=red>Rotation</color> {LevelRotation} <color=red>IsVisible</color> {IsEnabled}";
+            $"<color=red>Player</color> <color=red>Position</color> {PlayerPosition} <color=red>Rotation</color> {LevelRotation} <color=red>IsVisible</color> {IsEnabled}";
     }
 
     [Serializable]
@@ -89,7 +89,7 @@ namespace GeekProject
 
 
 
-        public override string ToString() => $" (X = {X} Y = {Y} Z = {Z})";
+        public override string ToString() => $" (X = {X} Y = {Y} Z = {Z} W = {Z}";
     }
 
 }
